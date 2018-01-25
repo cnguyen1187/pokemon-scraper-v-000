@@ -12,7 +12,7 @@ class Pokemon
   def alter_hp(hp, db)
     db.prepare("UPDATE pokemon SET hp = (?)" ).execute(hp)
   end
-    
+
   def self.save(pk_name, pk_type, db)
     db.prepare("INSERT INTO pokemon (name, type) VALUES (?, ?)" ).execute(pk_name, pk_type)
 
